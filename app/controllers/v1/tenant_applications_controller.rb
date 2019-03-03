@@ -10,6 +10,19 @@ class V1::TenantApplicationsController < ApplicationController
     render json: @tenant_application, status: :created
   end
 
+  def update
+    @tenant_application = TenantApplication.where(token: app_params[:token])
+    puts 'TENANT APPLICATION'
+    puts @tenant_application
+    puts 'END DATA'
+    @tenant_application.update(
+      # id: app_params[:id],
+      token: nil,
+      email: app_params[:email]
+    )
+    render json: @tenant_application, status: :ok
+  end
+
   def destroy
     @tenant_application = TenantApplication.where(id: params[:id]).first
     if @tenant_application.destroy
@@ -22,6 +35,6 @@ class V1::TenantApplicationsController < ApplicationController
   private
 
   def app_params
-    params.require(:tenant_application).permit(:token)
+    params.require(:tenant_application).permit(:token, :email, :id)
   end
 end
