@@ -37,6 +37,6 @@ class V1::TenantApplicationsController < ApplicationController
   private
 
   def app_params
-    params.require(:tenant_application).permit(:token, :email, :id)
+    params.require(:tenant_application).permit(:token, :email, :id, :application_type)
   end
 end
