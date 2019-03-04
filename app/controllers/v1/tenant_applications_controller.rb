@@ -4,6 +4,12 @@ class V1::TenantApplicationsController < ApplicationController
     render json: @tenant_applications, status: :ok
   end
 
+  # def show
+  #   @tenant_applicationn = TenantApplication.find_by(token: app_params[:token])
+  #   puts app_params
+  #   # render json: @tenant_applicationn, status: :ok
+  # end
+
   def create
     @tenant_application = TenantApplication.new(app_params)
     @tenant_application.save
@@ -11,12 +17,8 @@ class V1::TenantApplicationsController < ApplicationController
   end
 
   def update
-    @tenant_application = TenantApplication.where(token: app_params[:token])
-    puts 'TENANT APPLICATION'
-    puts @tenant_application
-    puts 'END DATA'
+    @tenant_application = TenantApplication.find_by(token: app_params[:token])
     @tenant_application.update(
-      # id: app_params[:id],
       token: nil,
       email: app_params[:email]
     )
@@ -24,7 +26,7 @@ class V1::TenantApplicationsController < ApplicationController
   end
 
   def destroy
-    @tenant_application = TenantApplication.where(id: params[:id]).first
+    @tenant_application = TenantApplication.find_by(id: params[:id])
     if @tenant_application.destroy
       head(:ok)
     else
