@@ -37,6 +37,20 @@ class V1::TenantApplicationsController < ApplicationController
   private
 
   def app_params
-    params.require(:tenant_application).permit(:token, :email, :id, :application_type)
+    params.require(:tenant_application).permit(
+      :token,
+      :email,
+      :id,
+      :application_type,
+      :evictions,
+      :firstName,
+      :lastName,
+      :landlord_email,
+      :landlord_name,
+      :landlord_phone,
+      :maiden_name,
+      :phone,
+      :ssn,
+    )
   end
 end
