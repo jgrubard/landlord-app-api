@@ -21,7 +21,6 @@ class V1::TenantApplicationsController < ApplicationController
     @tenant_application.update(
       token: nil,
       email: app_params[:email],
-      application_type: app_params[:application_type],
       evictions: app_params[:evictions],
       first_name: app_params[:first_name],
       last_name: app_params[:last_name],
