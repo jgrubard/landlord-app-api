@@ -20,7 +20,17 @@ class V1::TenantApplicationsController < ApplicationController
     @tenant_application = TenantApplication.find_by(token: app_params[:token])
     @tenant_application.update(
       token: nil,
-      email: app_params[:email]
+      email: app_params[:email],
+      application_type: app_params[:application_type],
+      evictions: app_params[:evictions],
+      first_name: app_params[:first_name],
+      last_name: app_params[:last_name],
+      landlord_email: app_params[:landlord_email],
+      landlord_name: app_params[:landlord_name],
+      landlord_phone: app_params[:landlord_phone],
+      maiden_name: app_params[:maiden_name],
+      phone: app_params[:phone],
+      ssn: app_params[:ssn],
     )
     render json: @tenant_application, status: :ok
   end
@@ -43,8 +53,8 @@ class V1::TenantApplicationsController < ApplicationController
       :id,
       :application_type,
       :evictions,
-      :firstName,
-      :lastName,
+      :first_name,
+      :last_name,
       :landlord_email,
       :landlord_name,
       :landlord_phone,
