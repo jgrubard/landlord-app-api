@@ -4,12 +4,6 @@ class V1::TenantApplicationsController < ApplicationController
     render json: @tenant_applications, status: :ok
   end
 
-  # def show
-  #   @tenant_applicationn = TenantApplication.find_by(token: app_params[:token])
-  #   puts app_params
-  #   # render json: @tenant_applicationn, status: :ok
-  # end
-
   def create
     @tenant_application = TenantApplication.new(app_params)
     @tenant_application.save
