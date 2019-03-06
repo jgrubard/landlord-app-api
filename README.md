@@ -1,8 +1,9 @@
 Landlord Application Management - Ruby on Rails API
 ----
 
-####[Deployed React App](https://landlord-app-jg.herokuapp.com)
-####[Ruby on Rails API](https://landlord-app-ruby-api.herokuapp.com/v1/tenant_applications)
+[Deployed React App](https://landlord-app-jg.herokuapp.com)
+
+[Ruby on Rails API](https://landlord-app-ruby-api.herokuapp.com/v1/tenant_applications)
 
 * Ruby 2.6.0
 * Rails 5.2.2
