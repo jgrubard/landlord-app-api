@@ -1,5 +1,4 @@
-##Landlord Application Management
-##Ruby on Rails API
+Landlord Application Management - Ruby on Rails API
 ----
 
 ####[Deployed React App](https://landlord-app-jg.herokuapp.com)
