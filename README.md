@@ -5,6 +5,8 @@ Landlord Application Management - Ruby on Rails API
 
 [Ruby on Rails API](https://landlord-app-ruby-api.herokuapp.com/v1/tenant_applications)
 
+Please be patient... since Heroku Applications go to sleep after about an hour of inactivity, it will take around 30 seconds or so to wake the app back up. Both the React Application and the Rails API need to be woken up, so please be sure to to refresh the page until there is data. I have left some applications preloaded, so if there are none -- be patient, they will appear (unless they have all been deleted by a third party visiting the site).
+
 * Ruby 2.6.0
 * Rails 5.2.2
 
