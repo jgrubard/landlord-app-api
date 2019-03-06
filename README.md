@@ -1,24 +1,26 @@
-# README
+##Landlord Application Management
+##Ruby on Rails API
+----
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+####[Deployed React App](https://landlord-app-jg.herokuapp.com)
+####[Ruby on Rails API](https://landlord-app-ruby-api.herokuapp.com/v1/tenant_applications)
 
-Things you may want to cover:
+* Ruby 2.6.0
+* Rails 5.2.2
 
-* Ruby version
+To copy the API repository to your local machine, please run the 
+ following command:
 
-* System dependencies
+    git clone https://github.com/jgrubard/landlord-app-api
 
-* Configuration
+Then once you have navigated into the directory via command line, to grab the necessary gems, please run:
 
-* Database creation
+    bundle install
 
-* Database initialization
+To start up the server, type the following command.
 
-* How to run the test suite
+    rails server
 
-* Services (job queues, cache servers, search engines, etc.)
+The server should be running on `port 3000`.
 
-* Deployment instructions
-
-* ...
+Data is routed from a `PostgreSQL` database to an exposed API as JSON Data. You will need `psql` and a database named `landlord_app_development` to be running.
